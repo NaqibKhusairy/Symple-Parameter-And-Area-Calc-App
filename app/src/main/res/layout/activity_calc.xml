@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".Calc">
+
+    <TextView
+        android:id="@+id/calc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:shadowColor="#ffffff"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="CALCULATE"
+        android:textAlignment="center"
+        android:textColor="#4253CD"
+        android:textSize="28sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.056" />
+
+    <TextView
+        android:id="@+id/shapename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:shadowColor="#ffffff"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="SHAPE NAME"
+        android:textAlignment="center"
+        android:textColor="#4253CD"
+        android:textSize="28sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calc"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <ImageView
+        android:id="@+id/shapeimg"
+        android:layout_width="178dp"
+        android:layout_height="169dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shapename"
+        app:srcCompat="@drawable/one" />
+
+    <TextView
+        android:id="@+id/formula"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:shadowColor="#ffffff"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="FORMULA"
+        android:textAlignment="center"
+        android:textColor="#4253CD"
+        android:textSize="28sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shapeimg"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/num1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/underline"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Enter Number 1"
+        android:textColor="#000000"
+        android:textColorHint="#754253CD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/formula" />
+
+    <EditText
+        android:id="@+id/num2"
+        android:hint="Enter Number 2"
+        android:layout_width="200dp"
+        android:textColor="#000000"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/underline"
+        android:ems="10"
+        android:inputType="number"
+        android:textColorHint="#754253CD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num1" />
+
+    <EditText
+        android:id="@+id/num3"
+        android:textColor="#000000"
+        android:hint="Enter Number 3"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/underline"
+        android:ems="10"
+        android:inputType="number"
+        android:textColorHint="#754253CD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num2" />
+
+    <EditText
+        android:id="@+id/num4"
+        android:textColor="#000000"
+        android:hint="Enter Number 4"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/underline"
+        android:ems="10"
+        android:inputType="number"
+        android:textColorHint="#754253CD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num3" />
+
+    <EditText
+        android:id="@+id/resl"
+        android:layout_width="359dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/underline"
+        android:ems="10"
+        android:text="Your Calculation Result"
+        android:textSize="28sp"
+        android:textStyle="bold|italic"
+        android:inputType="number"
+        android:textColor="#4253CD"
+        android:textColorHint="#754253CD"
+        android:shadowColor="#ffffff"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num4" />
+
+    <Button
+        android:id="@+id/calcbtn"
+        android:layout_width="359dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="3dp"
+        android:backgroundTint="#75A88D7A"
+        android:text="CALCULATE"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resl" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="359dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="3dp"
+        android:backgroundTint="#75A88D7A"
+        android:text="BACK"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calcbtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
