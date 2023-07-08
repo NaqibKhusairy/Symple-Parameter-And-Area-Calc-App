@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".ChooseShape">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:shadowColor="#ffffff"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="PARAMETER AND AREA CALCULATOR"
+        android:textAlignment="center"
+        android:textColor="#4253CD"
+        android:textSize="28sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.056" />
+
+    <LinearLayout
+        android:id="@+id/bulat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bujur"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2">
+
+        <ImageView
+            android:id="@+id/bulat1"
+            android:layout_width="109dp"
+            android:layout_height="84dp"
+            app:srcCompat="@drawable/circle"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="126dp" />
+
+        <TextView
+            android:id="@+id/bulat2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="CIRCLE"
+            tools:layout_editor_absoluteX="56dp"
+            tools:layout_editor_absoluteY="210dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bujur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2">
+
+        <ImageView
+            android:id="@+id/bujur1"
+            android:layout_width="109dp"
+            android:layout_height="84dp"
+            app:srcCompat="@drawable/ellipse"
+            tools:layout_editor_absoluteX="146dp"
+            tools:layout_editor_absoluteY="126dp" />
+
+        <TextView
+            android:id="@+id/bujur2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="ELLIPSE"
+            tools:layout_editor_absoluteX="174dp"
+            tools:layout_editor_absoluteY="210dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/segitiga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bujur"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2">
+
+        <ImageView
+            android:id="@+id/segitiga1"
+            android:layout_width="109dp"
+            android:layout_height="84dp"
+            app:srcCompat="@drawable/triangle"
+            tools:layout_editor_absoluteX="278dp"
+            tools:layout_editor_absoluteY="126dp" />
+
+        <TextView
+            android:id="@+id/segitiga2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="TRIANGLE"
+            tools:layout_editor_absoluteX="299dp"
+            tools:layout_editor_absoluteY="210dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/segiempatsama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/segiempattepat"
+        app:layout_constraintTop_toBottomOf="@id/bulat"
+        app:layout_constraintVertical_bias="0.052">
+
+        <ImageView
+            android:id="@+id/segiempatsama1"
+            android:layout_width="109dp"
+            android:layout_height="84dp"
+            app:srcCompat="@drawable/square"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="251dp" />
+
+        <TextView
+            android:id="@+id/segiempatsama2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="SQUARE"
+            tools:layout_editor_absoluteX="53dp"
+            tools:layout_editor_absoluteY="336dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/segiempattepat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bujur"
+        app:layout_constraintVertical_bias="0.052">
+
+        <ImageView
+            android:id="@+id/segiempattepat1"
+            android:layout_width="109dp"
+            android:layout_height="84dp"
+            app:srcCompat="@drawable/rectangle"
+            tools:layout_editor_absoluteX="146dp"
+            tools:layout_editor_absoluteY="251dp" />
+
+        <TextView
+            android:id="@+id/segiempattepat2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="RECTANGLE"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="336dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rhombus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/segiempattepat"
+        app:layout_constraintTop_toBottomOf="@id/segitiga"
+        app:layout_constraintVertical_bias="0.052">
+
+        <ImageView
+            android:id="@+id/rhombus1"
+            android:layout_width="109dp"
+            android:layout_height="84dp"
+            app:srcCompat="@drawable/rhombus"
+            tools:layout_editor_absoluteX="278dp"
+            tools:layout_editor_absoluteY="251dp" />
+
+        <TextView
+            android:id="@+id/rhombus2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="RHOMBUS"
+            tools:layout_editor_absoluteX="299dp"
+            tools:layout_editor_absoluteY="336dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layanglayang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/parallelogram"
+        app:layout_constraintTop_toBottomOf="@id/segiempatsama"
+        app:layout_constraintVertical_bias="0.052">
+
+        <ImageView
+            android:id="@+id/layanglayang1"
+            android:layout_width="109dp"
+            android:layout_height="84dp"
+            app:srcCompat="@drawable/kite"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="370dp" />
+
+        <TextView
+            android:id="@+id/layanglayang2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="KITE"
+            tools:layout_editor_absoluteX="56dp"
+            tools:layout_editor_absoluteY="454dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/parallelogram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/segiempattepat"
+        app:layout_constraintVertical_bias="0.052">
+
+        <ImageView
+            android:id="@+id/parallelogram1"
+            android:layout_width="109dp"
+            android:layout_height="84dp"
+            app:srcCompat="@drawable/parallelogram"
+            tools:layout_editor_absoluteX="146dp"
+            tools:layout_editor_absoluteY="370dp" />
+
+        <TextView
+            android:id="@+id/parallelogram2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="PARALLELOGRAM"
+            tools:layout_editor_absoluteX="174dp"
+            tools:layout_editor_absoluteY="454dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/trapizeum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/parallelogram"
+        app:layout_constraintTop_toBottomOf="@id/rhombus"
+        app:layout_constraintVertical_bias="0.052">
+
+        <ImageView
+            android:id="@+id/trapizeum1"
+            android:layout_width="109dp"
+            android:layout_height="84dp"
+            app:srcCompat="@drawable/trapezoid"
+            tools:layout_editor_absoluteX="278dp"
+            tools:layout_editor_absoluteY="370dp" />
+
+        <TextView
+            android:id="@+id/trapizeum2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="TRIPEZIOD"
+            tools:layout_editor_absoluteX="299dp"
+            tools:layout_editor_absoluteY="454dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pentagon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/hexagon"
+        app:layout_constraintTop_toBottomOf="@id/layanglayang"
+        app:layout_constraintVertical_bias="0.052">
+
+        <ImageView
+            android:id="@+id/pentagon1"
+            android:layout_width="109dp"
+            android:layout_height="84dp"
+            app:srcCompat="@drawable/pentagon"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="481dp" />
+
+        <TextView
+            android:id="@+id/pentagon2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="PENTAGON"
+            tools:layout_editor_absoluteX="53dp"
+            tools:layout_editor_absoluteY="565dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hexagon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/parallelogram"
+        app:layout_constraintVertical_bias="0.052">
+
+        <ImageView
+            android:id="@+id/hexagon1"
+            android:layout_width="109dp"
+            android:layout_height="84dp"
+            app:srcCompat="@drawable/hexagon"
+            tools:layout_editor_absoluteX="146dp"
+            tools:layout_editor_absoluteY="481dp" />
+
+        <TextView
+            android:id="@+id/hexagon2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="HEXAGON"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="565dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/heptagon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hexagon"
+        app:layout_constraintTop_toBottomOf="@id/trapizeum"
+        app:layout_constraintVertical_bias="0.052">
+
+        <ImageView
+            android:id="@+id/heptagon1"
+            android:layout_width="109dp"
+            android:layout_height="84dp"
+            app:srcCompat="@drawable/heptagon"
+            tools:layout_editor_absoluteX="278dp"
+            tools:layout_editor_absoluteY="481dp" />
+
+        <TextView
+            android:id="@+id/heptagon2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="HEPTAGON"
+            tools:layout_editor_absoluteX="299dp"
+            tools:layout_editor_absoluteY="565dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/oktagon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nonagon"
+        app:layout_constraintTop_toBottomOf="@id/pentagon"
+        app:layout_constraintVertical_bias="0.052">
+
+        <ImageView
+            android:id="@+id/oktagon1"
+            android:layout_width="109dp"
+            android:layout_height="84dp"
+            app:srcCompat="@drawable/oktagon"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="586dp" />
+
+        <TextView
+            android:id="@+id/oktagon2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="OKTAGON"
+            tools:layout_editor_absoluteX="53dp"
+            tools:layout_editor_absoluteY="670dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nonagon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hexagon"
+        app:layout_constraintVertical_bias="0.052">
+
+        <ImageView
+            android:id="@+id/nonagon1"
+            android:layout_width="109dp"
+            android:layout_height="84dp"
+            app:srcCompat="@drawable/nonagon"
+            tools:layout_editor_absoluteX="146dp"
+            tools:layout_editor_absoluteY="586dp" />
+
+        <TextView
+            android:id="@+id/nonagon2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="NONAGON"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="670dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dekagon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nonagon"
+        app:layout_constraintTop_toBottomOf="@id/heptagon"
+        app:layout_constraintVertical_bias="0.052">
+
+        <ImageView
+            android:id="@+id/dekagon1"
+            android:layout_width="109dp"
+            android:layout_height="84dp"
+            app:srcCompat="@drawable/dekagon"
+            tools:layout_editor_absoluteX="278dp"
+            tools:layout_editor_absoluteY="586dp" />
+
+        <TextView
+            android:id="@+id/dekagon2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="DEKAGON"
+            tools:layout_editor_absoluteX="299dp"
+            tools:layout_editor_absoluteY="670dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

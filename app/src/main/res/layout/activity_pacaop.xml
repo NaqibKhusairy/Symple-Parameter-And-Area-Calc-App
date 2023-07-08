@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".PACAOP">
+
+    <TextView
+        android:id="@+id/shapename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:shadowColor="#ffffff"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="SHAPE NAME"
+        android:textAlignment="center"
+        android:textColor="#4253CD"
+        android:textSize="28sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.056" />
+
+    <ImageView
+        android:id="@+id/shapeimg"
+        android:layout_width="178dp"
+        android:layout_height="169dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shapename"
+        app:srcCompat="@drawable/circle" />
+
+    <TextView
+        android:id="@+id/penerangan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="serif-monospace"
+        android:shadowColor="#ffffff"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="EXPLAINATION"
+        android:textAlignment="center"
+        android:textColor="#4253CD"
+        android:textSize="28sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shapeimg" />
+
+    <Button
+        android:id="@+id/parameter"
+        android:layout_width="359dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="#75A88D7A"
+        android:text="PARAMETER"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/penerangan" />
+
+    <Button
+        android:id="@+id/area"
+        android:layout_width="359dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="3dp"
+        android:backgroundTint="#75A88D7A"
+        android:text="AREA / LUAS"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parameter" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="359dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="3dp"
+        android:backgroundTint="#75A88D7A"
+        android:text="BACK"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/area" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
