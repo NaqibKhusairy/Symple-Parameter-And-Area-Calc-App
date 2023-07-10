@@ -35,6 +35,7 @@ public class PACAOP extends AppCompatActivity {
 
         shapename.setText(shape);
         shapeimage.setImageResource(ShapeImage);
+        penerangan.setText("PUT EXPLANATION");
 
         switch (shape){
             case "ELLIPSE":
