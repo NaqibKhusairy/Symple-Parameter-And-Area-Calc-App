@@ -43,9 +43,9 @@ public class PACAOP extends AppCompatActivity {
             case "PENTAGON":
             case "HEXAGON":
             case "HEPTAGON":
-            case "OKTAGON":
+            case "OCTAGON":
             case "NONAGON":
-            case "DEKAGON":
+            case "DECAGON":
                 area.setVisibility(View.GONE);
                 break;
             case "CIRCLE":

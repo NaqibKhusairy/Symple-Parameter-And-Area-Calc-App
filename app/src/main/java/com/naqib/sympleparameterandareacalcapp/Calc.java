@@ -2,6 +2,7 @@ package com.naqib.sympleparameterandareacalcapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class Calc extends AppCompatActivity {
     TextView calc,shapename,formula;
@@ -17,6 +17,176 @@ public class Calc extends AppCompatActivity {
     EditText num1,num2,num3,num4,result;
     Button Btncalc,back;
     String calculation,shape,Formula;
+    double pi=3.142,rslt,r,a,b,c,h,w,l,d;
+
+    @SuppressLint("SetTextI18n")
+    public void getresult(){
+        switch (shape){
+            case "CIRCLE":
+                if(calculation.equals("CIRCUMFERENCE / UKURLILIT")){
+                    r=Double.parseDouble(num1.getText().toString());
+                    rslt=2*pi*r;
+                    result.setText(""+rslt);
+                }
+                else if(calculation.equals("AREA / LUAS")){
+                    r=Double.parseDouble(num1.getText().toString());
+                    rslt=pi*r*r;
+                    result.setText(""+rslt);
+                }
+                break;
+            case "ELLIPSE":
+                if(calculation.equals("AREA / LUAS")){
+                    a=Double.parseDouble(num1.getText().toString());
+                    b=Double.parseDouble(num2.getText().toString());
+                    rslt=pi*a*b;
+                    result.setText(""+rslt);
+                }
+                break;
+            case "TRIANGLE":
+                if(calculation.equals("PERIMETER")){
+                    a=Double.parseDouble(num1.getText().toString());
+                    b=Double.parseDouble(num2.getText().toString());
+                    c=Double.parseDouble(num3.getText().toString());
+                    rslt=a+b+c;
+                    result.setText(""+rslt);
+                }
+                else if(calculation.equals("AREA / LUAS")){
+                    h=Double.parseDouble(num1.getText().toString());
+                    b=Double.parseDouble(num2.getText().toString());
+                    rslt=(h*b)*1/2;
+                    result.setText(""+rslt);
+                }
+                break;
+            case "SQUARE":
+                if(calculation.equals("PERIMETER")){
+                    a=Double.parseDouble(num1.getText().toString());
+                    rslt=4*a;
+                    result.setText(""+rslt);
+                }
+                else if(calculation.equals("AREA / LUAS")){
+                    a=Double.parseDouble(num1.getText().toString());
+                    rslt=a*a;
+                    result.setText(""+rslt);
+                }
+                break;
+            case "RECTANGLE":
+                if(calculation.equals("PERIMETER")){
+                    w=Double.parseDouble(num1.getText().toString());
+                    l=Double.parseDouble(num2.getText().toString());
+                    rslt=2*(w+l);
+                    result.setText(""+rslt);
+                }
+                else if(calculation.equals("AREA / LUAS")){
+                    w=Double.parseDouble(num1.getText().toString());
+                    l=Double.parseDouble(num2.getText().toString());
+                    rslt=(w*l);
+                    result.setText(""+rslt);
+                }
+                break;
+            case "RHOMBUS":
+                if(calculation.equals("PERIMETER")){
+                    a=Double.parseDouble(num1.getText().toString());
+                    rslt=4*a;
+                    result.setText(""+rslt);
+                }
+                else if(calculation.equals("AREA / LUAS")){
+                    h=Double.parseDouble(num1.getText().toString());
+                    w=Double.parseDouble(num2.getText().toString());
+                    rslt=(h*w)*1/2;
+                    result.setText(""+rslt);
+                }
+                break;
+            case "KITE":
+                if(calculation.equals("PERIMETER")){
+                    a=Double.parseDouble(num1.getText().toString());
+                    b=Double.parseDouble(num2.getText().toString());
+                    rslt=2*(a+b);
+                    result.setText(""+rslt);
+                }
+                else if(calculation.equals("AREA / LUAS")){
+                    h=Double.parseDouble(num1.getText().toString());
+                    w=Double.parseDouble(num2.getText().toString());
+                    rslt=(w*h)*1/2;
+                    result.setText(""+rslt);
+                }
+                break;
+            case "PARALLELOGRAM":
+                if(calculation.equals("PERIMETER")){
+                    a=Double.parseDouble(num1.getText().toString());
+                    b=Double.parseDouble(num2.getText().toString());
+                    rslt=2*(a+b);
+                    result.setText(""+rslt);
+                }
+                else if(calculation.equals("AREA / LUAS")){
+                    b=Double.parseDouble(num1.getText().toString());
+                    h=Double.parseDouble(num2.getText().toString());
+                    rslt=b*h;
+                    result.setText(""+rslt);
+                }
+                break;
+            case "TRAPEZOID":
+                if(calculation.equals("PERIMETER")){
+                    a=Double.parseDouble(num1.getText().toString());
+                    b=Double.parseDouble(num2.getText().toString());
+                    c=Double.parseDouble(num3.getText().toString());
+                    d=Double.parseDouble(num4.getText().toString());
+                    rslt=a+b+c+d;
+                    result.setText(""+rslt);
+                }
+                else if(calculation.equals("AREA / LUAS")){
+                    a=Double.parseDouble(num1.getText().toString());
+                    b=Double.parseDouble(num2.getText().toString());
+                    h=Double.parseDouble(num3.getText().toString());
+                    rslt=(a+b)*1/2*h;
+                    result.setText(""+rslt);
+                }
+                break;
+            case "PENTAGON":
+                if(calculation.equals("PERIMETER")){
+                    a=Double.parseDouble(num1.getText().toString());
+                    rslt=5*a;
+                    result.setText(""+rslt);
+                }
+                break;
+            case "HEXAGON":
+                if(calculation.equals("PERIMETER")){
+                    a=Double.parseDouble(num1.getText().toString());
+                    rslt=6*a;
+                    result.setText(""+rslt);
+                }
+                break;
+            case "HEPTAGON":
+                if(calculation.equals("PERIMETER")){
+                    a=Double.parseDouble(num1.getText().toString());
+                    rslt=7*a;
+                    result.setText(""+rslt);
+                }
+                break;
+            case "OCTAGON":
+                if(calculation.equals("PERIMETER")){
+                    a=Double.parseDouble(num1.getText().toString());
+                    rslt=8*a;
+                    result.setText(""+rslt);
+                }
+                break;
+            case "NONAGON":
+                if(calculation.equals("PERIMETER")){
+                    a=Double.parseDouble(num1.getText().toString());
+                    rslt=9*a;
+                    result.setText(""+rslt);
+                }
+                break;
+            case "DECAGON":
+                if(calculation.equals("PERIMETER")){
+                    a=Double.parseDouble(num1.getText().toString());
+                    rslt=10*a;
+                    result.setText(""+rslt);
+                }
+                break;
+            default:
+                rslt=0;
+        }
+    }
 
     public void formla(){
         switch (shape){
@@ -276,6 +446,7 @@ public class Calc extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 result.setVisibility(View.VISIBLE);
+                getresult();
             }
         });
 
