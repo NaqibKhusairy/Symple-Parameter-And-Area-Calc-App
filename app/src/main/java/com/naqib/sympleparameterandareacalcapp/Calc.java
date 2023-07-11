@@ -16,175 +16,274 @@ public class Calc extends AppCompatActivity {
     ImageView shapeimage;
     EditText num1,num2,num3,num4,result;
     Button Btncalc,back;
-    String calculation,shape,Formula;
+    String calculation,shape,Formula,Required1,Required2,Required3,Required4;
     double pi=3.142,rslt,r,a,b,c,h,w,l,d;
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint({"SetTextI18n", "DefaultLocale"})
     public void getresult(){
-        switch (shape){
-            case "CIRCLE":
-                if(calculation.equals("CIRCUMFERENCE / UKURLILIT")){
-                    r=Double.parseDouble(num1.getText().toString());
-                    rslt=2*pi*r;
-                    result.setText(""+rslt);
-                }
-                else if(calculation.equals("AREA / LUAS")){
-                    r=Double.parseDouble(num1.getText().toString());
-                    rslt=pi*r*r;
-                    result.setText(""+rslt);
-                }
-                break;
-            case "ELLIPSE":
-                if(calculation.equals("AREA / LUAS")){
-                    a=Double.parseDouble(num1.getText().toString());
-                    b=Double.parseDouble(num2.getText().toString());
-                    rslt=pi*a*b;
-                    result.setText(""+rslt);
-                }
-                break;
-            case "TRIANGLE":
-                if(calculation.equals("PERIMETER")){
-                    a=Double.parseDouble(num1.getText().toString());
-                    b=Double.parseDouble(num2.getText().toString());
-                    c=Double.parseDouble(num3.getText().toString());
-                    rslt=a+b+c;
-                    result.setText(""+rslt);
-                }
-                else if(calculation.equals("AREA / LUAS")){
-                    h=Double.parseDouble(num1.getText().toString());
-                    b=Double.parseDouble(num2.getText().toString());
-                    rslt=(h*b)*1/2;
-                    result.setText(""+rslt);
-                }
-                break;
-            case "SQUARE":
-                if(calculation.equals("PERIMETER")){
-                    a=Double.parseDouble(num1.getText().toString());
-                    rslt=4*a;
-                    result.setText(""+rslt);
-                }
-                else if(calculation.equals("AREA / LUAS")){
-                    a=Double.parseDouble(num1.getText().toString());
-                    rslt=a*a;
-                    result.setText(""+rslt);
-                }
-                break;
-            case "RECTANGLE":
-                if(calculation.equals("PERIMETER")){
-                    w=Double.parseDouble(num1.getText().toString());
-                    l=Double.parseDouble(num2.getText().toString());
-                    rslt=2*(w+l);
-                    result.setText(""+rslt);
-                }
-                else if(calculation.equals("AREA / LUAS")){
-                    w=Double.parseDouble(num1.getText().toString());
-                    l=Double.parseDouble(num2.getText().toString());
-                    rslt=(w*l);
-                    result.setText(""+rslt);
-                }
-                break;
-            case "RHOMBUS":
-                if(calculation.equals("PERIMETER")){
-                    a=Double.parseDouble(num1.getText().toString());
-                    rslt=4*a;
-                    result.setText(""+rslt);
-                }
-                else if(calculation.equals("AREA / LUAS")){
-                    h=Double.parseDouble(num1.getText().toString());
-                    w=Double.parseDouble(num2.getText().toString());
-                    rslt=(h*w)*1/2;
-                    result.setText(""+rslt);
-                }
-                break;
-            case "KITE":
-                if(calculation.equals("PERIMETER")){
-                    a=Double.parseDouble(num1.getText().toString());
-                    b=Double.parseDouble(num2.getText().toString());
-                    rslt=2*(a+b);
-                    result.setText(""+rslt);
-                }
-                else if(calculation.equals("AREA / LUAS")){
-                    h=Double.parseDouble(num1.getText().toString());
-                    w=Double.parseDouble(num2.getText().toString());
-                    rslt=(w*h)*1/2;
-                    result.setText(""+rslt);
-                }
-                break;
-            case "PARALLELOGRAM":
-                if(calculation.equals("PERIMETER")){
-                    a=Double.parseDouble(num1.getText().toString());
-                    b=Double.parseDouble(num2.getText().toString());
-                    rslt=2*(a+b);
-                    result.setText(""+rslt);
-                }
-                else if(calculation.equals("AREA / LUAS")){
-                    b=Double.parseDouble(num1.getText().toString());
-                    h=Double.parseDouble(num2.getText().toString());
-                    rslt=b*h;
-                    result.setText(""+rslt);
-                }
-                break;
-            case "TRAPEZOID":
-                if(calculation.equals("PERIMETER")){
-                    a=Double.parseDouble(num1.getText().toString());
-                    b=Double.parseDouble(num2.getText().toString());
-                    c=Double.parseDouble(num3.getText().toString());
-                    d=Double.parseDouble(num4.getText().toString());
-                    rslt=a+b+c+d;
-                    result.setText(""+rslt);
-                }
-                else if(calculation.equals("AREA / LUAS")){
-                    a=Double.parseDouble(num1.getText().toString());
-                    b=Double.parseDouble(num2.getText().toString());
-                    h=Double.parseDouble(num3.getText().toString());
-                    rslt=(a+b)*1/2*h;
-                    result.setText(""+rslt);
-                }
-                break;
-            case "PENTAGON":
-                if(calculation.equals("PERIMETER")){
-                    a=Double.parseDouble(num1.getText().toString());
-                    rslt=5*a;
-                    result.setText(""+rslt);
-                }
-                break;
-            case "HEXAGON":
-                if(calculation.equals("PERIMETER")){
-                    a=Double.parseDouble(num1.getText().toString());
-                    rslt=6*a;
-                    result.setText(""+rslt);
-                }
-                break;
-            case "HEPTAGON":
-                if(calculation.equals("PERIMETER")){
-                    a=Double.parseDouble(num1.getText().toString());
-                    rslt=7*a;
-                    result.setText(""+rslt);
-                }
-                break;
-            case "OCTAGON":
-                if(calculation.equals("PERIMETER")){
-                    a=Double.parseDouble(num1.getText().toString());
-                    rslt=8*a;
-                    result.setText(""+rslt);
-                }
-                break;
-            case "NONAGON":
-                if(calculation.equals("PERIMETER")){
-                    a=Double.parseDouble(num1.getText().toString());
-                    rslt=9*a;
-                    result.setText(""+rslt);
-                }
-                break;
-            case "DECAGON":
-                if(calculation.equals("PERIMETER")){
-                    a=Double.parseDouble(num1.getText().toString());
-                    rslt=10*a;
-                    result.setText(""+rslt);
-                }
-                break;
-            default:
-                rslt=0;
+        try{
+            switch (shape){
+                case "CIRCLE":
+                    if(calculation.equals("CIRCUMFERENCE / UKURLILIT")){
+                        r=Double.parseDouble(num1.getText().toString());
+                        rslt=2*pi*r;
+                    }
+                    else if(calculation.equals("AREA / LUAS")){
+                        r=Double.parseDouble(num1.getText().toString());
+                        rslt=pi*r*r;
+                    }
+                    break;
+                case "ELLIPSE":
+                    if(calculation.equals("AREA / LUAS")){
+                        a=Double.parseDouble(num1.getText().toString());
+                        b=Double.parseDouble(num2.getText().toString());
+                        rslt=pi*a*b;
+                    }
+                    break;
+                case "TRIANGLE":
+                    if(calculation.equals("PERIMETER")){
+                        a=Double.parseDouble(num1.getText().toString());
+                        b=Double.parseDouble(num2.getText().toString());
+                        c=Double.parseDouble(num3.getText().toString());
+                        rslt=a+b+c;
+                    }
+                    else if(calculation.equals("AREA / LUAS")){
+                        h=Double.parseDouble(num1.getText().toString());
+                        b=Double.parseDouble(num2.getText().toString());
+                        rslt=(h*b)*1/2;
+                    }
+                    break;
+                case "SQUARE":
+                    if(calculation.equals("PERIMETER")){
+                        a=Double.parseDouble(num1.getText().toString());
+                        rslt=4*a;
+                    }
+                    else if(calculation.equals("AREA / LUAS")){
+                        a=Double.parseDouble(num1.getText().toString());
+                        rslt=a*a;
+                    }
+                    break;
+                case "RECTANGLE":
+                    if(calculation.equals("PERIMETER")){
+                        w=Double.parseDouble(num1.getText().toString());
+                        l=Double.parseDouble(num2.getText().toString());
+                        rslt=2*(w+l);
+                    }
+                    else if(calculation.equals("AREA / LUAS")){
+                        w=Double.parseDouble(num1.getText().toString());
+                        l=Double.parseDouble(num2.getText().toString());
+                        rslt=(w*l);
+                    }
+                    break;
+                case "RHOMBUS":
+                    if(calculation.equals("PERIMETER")){
+                        a=Double.parseDouble(num1.getText().toString());
+                        rslt=4*a;
+                    }
+                    else if(calculation.equals("AREA / LUAS")){
+                        h=Double.parseDouble(num1.getText().toString());
+                        w=Double.parseDouble(num2.getText().toString());
+                        rslt=(h*w)*1/2;
+                    }
+                    break;
+                case "KITE":
+                    if(calculation.equals("PERIMETER")){
+                        a=Double.parseDouble(num1.getText().toString());
+                        b=Double.parseDouble(num2.getText().toString());
+                        rslt=2*(a+b);
+                    }
+                    else if(calculation.equals("AREA / LUAS")){
+                        h=Double.parseDouble(num1.getText().toString());
+                        w=Double.parseDouble(num2.getText().toString());
+                        rslt=(w*h)*1/2;
+                    }
+                    break;
+                case "PARALLELOGRAM":
+                    if(calculation.equals("PERIMETER")){
+                        a=Double.parseDouble(num1.getText().toString());
+                        b=Double.parseDouble(num2.getText().toString());
+                        rslt=2*(a+b);
+                    }
+                    else if(calculation.equals("AREA / LUAS")){
+                        b=Double.parseDouble(num1.getText().toString());
+                        h=Double.parseDouble(num2.getText().toString());
+                        rslt=b*h;
+                    }
+                    break;
+                case "TRAPEZOID":
+                    if(calculation.equals("PERIMETER")){
+                        a=Double.parseDouble(num1.getText().toString());
+                        b=Double.parseDouble(num2.getText().toString());
+                        c=Double.parseDouble(num3.getText().toString());
+                        d=Double.parseDouble(num4.getText().toString());
+                        rslt=a+b+c+d;
+                    }
+                    else if(calculation.equals("AREA / LUAS")){
+                        a=Double.parseDouble(num1.getText().toString());
+                        b=Double.parseDouble(num2.getText().toString());
+                        h=Double.parseDouble(num3.getText().toString());
+                        rslt=(a+b)*1/2*h;
+                    }
+                    break;
+                case "PENTAGON":
+                    if(calculation.equals("PERIMETER")){
+                        a=Double.parseDouble(num1.getText().toString());
+                        rslt=5*a;
+                    }
+                    break;
+                case "HEXAGON":
+                    if(calculation.equals("PERIMETER")){
+                        a=Double.parseDouble(num1.getText().toString());
+                        rslt=6*a;
+                    }
+                    break;
+                case "HEPTAGON":
+                    if(calculation.equals("PERIMETER")){
+                        a=Double.parseDouble(num1.getText().toString());
+                        rslt=7*a;
+                    }
+                    break;
+                case "OCTAGON":
+                    if(calculation.equals("PERIMETER")){
+                        a=Double.parseDouble(num1.getText().toString());
+                        rslt=8*a;
+                    }
+                    break;
+                case "NONAGON":
+                    if(calculation.equals("PERIMETER")){
+                        a=Double.parseDouble(num1.getText().toString());
+                        rslt=9*a;
+                    }
+                    break;
+                case "DECAGON":
+                    if(calculation.equals("PERIMETER")){
+                        a=Double.parseDouble(num1.getText().toString());
+                        rslt=10*a;
+                    }
+                    break;
+                default:
+                    rslt=0;
+            }
+            result.setText(String.format("%.2f", rslt));
+        } catch (Exception e) {
+            switch (shape){
+                case "CIRCLE":
+                    if(calculation.equals("CIRCUMFERENCE / UKURLILIT")){
+                        Required1="Please enter the value of r";
+                    }
+                    else if(calculation.equals("AREA / LUAS")){
+                        Required1="Please enter the value of r";
+                    }
+                    break;
+                case "ELLIPSE":
+                    if(calculation.equals("AREA / LUAS")){
+                        Required1="Please enter the value of a";
+                        Required2="Please enter the value of b";
+                    }
+                    break;
+                case "TRIANGLE":
+                    if(calculation.equals("PERIMETER")){
+                        Required1="Please enter the value of a";
+                        Required2="Please enter the value of b";
+                        Required3="Please enter the value of c";
+                    }
+                    else if(calculation.equals("AREA / LUAS")){
+                        Required1="Please enter the value of h";
+                        Required2="Please enter the value of b";
+                    }
+                    break;
+                case "SQUARE":
+                    if(calculation.equals("PERIMETER")){
+                        Required1="Please enter the value of a";
+                    }
+                    else if(calculation.equals("AREA / LUAS")){
+                        Required1="Please enter the value of a";
+                    }
+                    break;
+                case "RECTANGLE":
+                    if(calculation.equals("PERIMETER")){
+                        Required1="Please enter the value of w";
+                        Required2="Please enter the value of l";
+                    }
+                    else if(calculation.equals("AREA / LUAS")){
+                        Required1="Please enter the value of w";
+                        Required2="Please enter the value of l";
+                    }
+                    break;
+                case "RHOMBUS":
+                    if(calculation.equals("PERIMETER")){
+                        Required1="Please enter the value of a";
+                    }
+                    else if(calculation.equals("AREA / LUAS")){
+                        Required1="Please enter the value of h";
+                        Required2="Please enter the value of w";
+                    }
+                    break;
+                case "KITE":
+                    if(calculation.equals("PERIMETER")){
+                        Required1="Please enter the value of a";
+                        Required2="Please enter the value of b";
+                    }
+                    else if(calculation.equals("AREA / LUAS")){
+                        Required1="Please enter the value of h";
+                        Required2="Please enter the value of w";
+                    }
+                    break;
+                case "PARALLELOGRAM":
+                    if(calculation.equals("PERIMETER")){
+                        Required1="Please enter the value of a";
+                        Required2="Please enter the value of b";
+                    }
+                    else if(calculation.equals("AREA / LUAS")){
+                        Required1="Please enter the value of b";
+                        Required2="Please enter the value of h";
+                    }
+                    break;
+                case "TRAPEZOID":
+                    if(calculation.equals("PERIMETER")){
+                        Required1="Please enter the value of a";
+                        Required2="Please enter the value of b";
+                        Required3="Please enter the value of c";
+                        Required4="Please enter the value of d";
+                    }
+                    else if(calculation.equals("AREA / LUAS")){
+                        Required1="Please enter the value of a";
+                        Required2="Please enter the value of b";
+                        Required3="Please enter the value of h";
+                    }
+                    break;
+                case "PENTAGON":
+                case "HEXAGON":
+                case "HEPTAGON":
+                case "OCTAGON":
+                case "NONAGON":
+                case "DECAGON":
+                    if(calculation.equals("PERIMETER")){
+                        Required1="Please enter the value of a";
+                    }
+                    break;
+                default:
+                    rslt=0;
+            }
+            if((num1.getText().toString()).isEmpty()&&(num2.getText().toString()).isEmpty()&&(num3.getText().toString()).isEmpty()&&(num4.getText().toString()).isEmpty()){
+                num1.setError(Required1);
+                num2.setError(Required2);
+                num3.setError(Required3);
+                num4.setError(Required4);
+            }
+            else if((num1.getText().toString()).isEmpty()){
+                num1.setError(Required1);
+            }
+            else if((num2.getText().toString()).isEmpty()){
+                num2.setError(Required2);
+            }
+            else if((num3.getText().toString()).isEmpty()){
+                num3.setError(Required3);
+            }
+            else if((num4.getText().toString()).isEmpty()){
+                num4.setError(Required4);
+            }
+            result.setVisibility(View.GONE);
         }
     }
 

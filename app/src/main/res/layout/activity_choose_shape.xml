@@ -54,6 +54,7 @@
             android:layout_gravity="center"
             android:foregroundGravity="center"
             android:gravity="center"
+            android:textColor="#2D2B28"
             android:text="CIRCLE"
             tools:layout_editor_absoluteX="56dp"
             tools:layout_editor_absoluteY="210dp" />
@@ -87,6 +88,7 @@
             android:foregroundGravity="center"
             android:gravity="center"
             android:text="ELLIPSE"
+            android:textColor="#2D2B28"
             tools:layout_editor_absoluteX="174dp"
             tools:layout_editor_absoluteY="210dp" />
 
@@ -118,6 +120,7 @@
             android:layout_gravity="center"
             android:foregroundGravity="center"
             android:gravity="center"
+            android:textColor="#2D2B28"
             android:text="TRIANGLE"
             tools:layout_editor_absoluteX="299dp"
             tools:layout_editor_absoluteY="210dp" />
@@ -151,6 +154,7 @@
             android:foregroundGravity="center"
             android:gravity="center"
             android:text="SQUARE"
+            android:textColor="#2D2B28"
             tools:layout_editor_absoluteX="53dp"
             tools:layout_editor_absoluteY="336dp" />
 
@@ -183,6 +187,7 @@
             android:foregroundGravity="center"
             android:gravity="center"
             android:text="RECTANGLE"
+            android:textColor="#2D2B28"
             tools:layout_editor_absoluteX="161dp"
             tools:layout_editor_absoluteY="336dp" />
 
@@ -215,6 +220,7 @@
             android:foregroundGravity="center"
             android:gravity="center"
             android:text="RHOMBUS"
+            android:textColor="#2D2B28"
             tools:layout_editor_absoluteX="299dp"
             tools:layout_editor_absoluteY="336dp" />
 
@@ -247,6 +253,7 @@
             android:foregroundGravity="center"
             android:gravity="center"
             android:text="KITE"
+            android:textColor="#2D2B28"
             tools:layout_editor_absoluteX="56dp"
             tools:layout_editor_absoluteY="454dp" />
 
@@ -279,6 +286,7 @@
             android:foregroundGravity="center"
             android:gravity="center"
             android:text="PARALLELOGRAM"
+            android:textColor="#2D2B28"
             tools:layout_editor_absoluteX="174dp"
             tools:layout_editor_absoluteY="454dp" />
 
@@ -311,6 +319,7 @@
             android:foregroundGravity="center"
             android:gravity="center"
             android:text="TRAPEZOID"
+            android:textColor="#2D2B28"
             tools:layout_editor_absoluteX="299dp"
             tools:layout_editor_absoluteY="454dp" />
 
@@ -343,6 +352,7 @@
             android:foregroundGravity="center"
             android:gravity="center"
             android:text="PENTAGON"
+            android:textColor="#2D2B28"
             tools:layout_editor_absoluteX="53dp"
             tools:layout_editor_absoluteY="565dp" />
 
@@ -375,6 +385,7 @@
             android:foregroundGravity="center"
             android:gravity="center"
             android:text="HEXAGON"
+            android:textColor="#2D2B28"
             tools:layout_editor_absoluteX="161dp"
             tools:layout_editor_absoluteY="565dp" />
 
@@ -407,6 +418,7 @@
             android:foregroundGravity="center"
             android:gravity="center"
             android:text="HEPTAGON"
+            android:textColor="#2D2B28"
             tools:layout_editor_absoluteX="299dp"
             tools:layout_editor_absoluteY="565dp" />
 
@@ -439,6 +451,7 @@
             android:foregroundGravity="center"
             android:gravity="center"
             android:text="OCTAGON"
+            android:textColor="#2D2B28"
             tools:layout_editor_absoluteX="53dp"
             tools:layout_editor_absoluteY="670dp" />
 
@@ -471,6 +484,7 @@
             android:foregroundGravity="center"
             android:gravity="center"
             android:text="NONAGON"
+            android:textColor="#2D2B28"
             tools:layout_editor_absoluteX="161dp"
             tools:layout_editor_absoluteY="670dp" />
 
@@ -503,6 +517,7 @@
             android:foregroundGravity="center"
             android:gravity="center"
             android:text="DECAGON"
+            android:textColor="#2D2B28"
             tools:layout_editor_absoluteX="299dp"
             tools:layout_editor_absoluteY="670dp" />
 
