@@ -68,7 +68,7 @@
         android:layout_width="359dp"
         android:layout_height="46dp"
         android:backgroundTint="#75A88D7A"
-        android:text="START CHECK YOUR BMI"
+        android:text="CLICK TO START"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
